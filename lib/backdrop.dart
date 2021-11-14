@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+import 'login.dart';
 import 'model/product.dart';
 
 //  Add velocity constant (104)
@@ -181,7 +182,12 @@ class _BackdropState extends State<Backdrop>
             semanticLabel: 'login', // New code
           ),
           onPressed: () {
-            // TODO: Add open login (104)
+            //  Add open login (104)
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => LoginPage()),
+            );
           },
         ),
       ],
