@@ -69,6 +69,7 @@ class _BackdropState extends State<Backdrop>
     with SingleTickerProviderStateMixin {
   final GlobalKey _backdropKey = GlobalKey(debugLabel: 'Backdrop');
   // TODO: Add AnimationController widget (104)
+
   late AnimationController _controller;
 
   @override
@@ -116,6 +117,7 @@ class _BackdropState extends State<Backdrop>
     final double layerTop = layerSize.height - layerTitleHeight;
 
     // TODO: Create a RelativeRectTween Animation (104)
+
     Animation<RelativeRect> layerAnimation = RelativeRectTween(
       begin: RelativeRect.fromLTRB(
           0.0, layerTop, 0.0, layerTop - layerSize.height),
@@ -135,6 +137,7 @@ class _BackdropState extends State<Backdrop>
           rect: layerAnimation,
           child: _FrontLayer(
             // TODO: Implement onTap property on _BackdropState (104)
+
             onTap: _toggleBackdropLayerVisibility,
             child: widget.frontLayer,
           ),
@@ -150,13 +153,17 @@ class _BackdropState extends State<Backdrop>
       elevation: 0.0,
       titleSpacing: 0.0,
       //  Replace leading menu icon with IconButton (104)
-      leading: IconButton(
-        icon: const Icon(Icons.menu),
-        onPressed: _toggleBackdropLayerVisibility,
+
+
+      //  Remove leading property (104)
+      // Create title with _BackdropTitle parameter (104)
+      title: _BackdropTitle(
+        listenable: _controller.view,
+        onPress: _toggleBackdropLayerVisibility,
+        frontTitle: widget.frontTitle,
+        backTitle: widget.backTitle,
       ),
-      // TODO: Remove leading property (104)
-      // TODO: Create title with _BackdropTitle parameter (104)
-      title: Text('SHRINE'),
+
       actions: <Widget>[
         // TODO: Add shortcut to login screen from trailing icons (104)
         IconButton(
