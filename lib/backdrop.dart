@@ -30,9 +30,10 @@ class _FrontLayer extends StatelessWidget {
   // TODO: Add on-tap callback (104)
   const _FrontLayer({
     Key? key,
+    this.onTap, // New code
     required this.child,
   }) : super(key: key);
-
+  final VoidCallback? onTap; // New code
   final Widget child;
 
   @override
