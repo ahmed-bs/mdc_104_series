@@ -45,7 +45,7 @@ class _ShrineAppState extends State<ShrineApp> {
         // TODO: Make currentCategory field take _currentCategory (104)
         currentCategory: _currentCategory,
         // TODO: Pass _currentCategory for frontLayer (104)
-        frontLayer: HomePage(),
+        frontLayer: HomePage(category: _currentCategory),
         // TODO: Change backLayer field value to CategoryMenuPage (104)
         backLayer: CategoryMenuPage(
           currentCategory: _currentCategory,
@@ -55,7 +55,7 @@ class _ShrineAppState extends State<ShrineApp> {
         backTitle: Text('MENU'),
       ),
       // TODO: Make currentCategory field take _currentCategory (104)
-      // TODO: Pass _currentCategory for frontLayer (104)
+
       // TODO: Change backLayer field value to CategoryMenuPage (104)
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
