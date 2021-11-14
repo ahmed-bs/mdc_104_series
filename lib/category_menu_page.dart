@@ -4,6 +4,12 @@ import 'package:meta/meta.dart';
 import 'colors.dart';
 import 'model/product.dart';
 
+import 'backdrop.dart';
+import 'home.dart';
+import 'login.dart';
+import 'category_menu_page.dart';
+import 'supplemental/cut_corners_border.dart';
+
 class CategoryMenuPage extends StatelessWidget {
   final Category currentCategory;
   final ValueChanged<Category> onCategoryTap;
