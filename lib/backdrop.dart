@@ -135,6 +135,7 @@ class _BackdropState extends State<Backdrop>
           rect: layerAnimation,
           child: _FrontLayer(
             // TODO: Implement onTap property on _BackdropState (104)
+            onTap: _toggleBackdropLayerVisibility,
             child: widget.frontLayer,
           ),
         ),
