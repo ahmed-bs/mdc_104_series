@@ -92,8 +92,7 @@ class _BackdropState extends State<Backdrop>
     _controller.fling(
         velocity: _frontLayerVisible ? -_kFlingVelocity : _kFlingVelocity);
   }
-  // TODO: Add BuildContext and BoxConstraints parameters to _buildStack (104)
-// TODO: Add BuildContext and BoxConstraints parameters to _buildStack (104)
+  //  Add BuildContext and BoxConstraints parameters to _buildStack (104)
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     const double layerTitleHeight = 48.0;
     final Size layerSize = constraints.biggest;
@@ -132,10 +131,13 @@ class _BackdropState extends State<Backdrop>
       brightness: Brightness.light,
       elevation: 0.0,
       titleSpacing: 0.0,
-      // TODO: Replace leading menu icon with IconButton (104)
+      //  Replace leading menu icon with IconButton (104)
+      leading: IconButton(
+        icon: const Icon(Icons.menu),
+        onPressed: _toggleBackdropLayerVisibility,
+      ),
       // TODO: Remove leading property (104)
       // TODO: Create title with _BackdropTitle parameter (104)
-      leading: Icon(Icons.menu),
       title: Text('SHRINE'),
       actions: <Widget>[
         // TODO: Add shortcut to login screen from trailing icons (104)
