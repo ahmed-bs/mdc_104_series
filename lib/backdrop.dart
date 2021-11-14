@@ -165,11 +165,11 @@ class _BackdropState extends State<Backdrop>
       ),
 
       actions: <Widget>[
-        // TODO: Add shortcut to login screen from trailing icons (104)
+        //  Add shortcut to login screen from trailing icons (104)
         IconButton(
           icon: Icon(
             Icons.search,
-            semanticLabel: 'search',
+            semanticLabel: 'login', // New code
           ),
           onPressed: () {
             // TODO: Add open login (104)
