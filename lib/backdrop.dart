@@ -172,13 +172,13 @@ class _BackdropState extends State<Backdrop>
             semanticLabel: 'login', // New code
           ),
           onPressed: () {
-            // TODO: Add open login (104)
+            // Add open login (104)
           },
         ),
         IconButton(
           icon: Icon(
             Icons.tune,
-            semanticLabel: 'filter',
+            semanticLabel: 'login', // New code
           ),
           onPressed: () {
             // TODO: Add open login (104)
